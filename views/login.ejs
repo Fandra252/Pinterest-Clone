@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="container" style="margin-top: 15vh;">
+    <div class="content">
+      <!--pinterest logo-->
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"
+        class="img1" />
+      <p class="header">Welcome to Pinterest</p>
+      <% if(error.length> 0) { %>
+        <p class="error">
+          <%= error %>
+        </p>
+        <% } %>
+          <form action="/login" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Username" class="detail" /><br />
+            <!-- <input type="email" name="email" placeholder="Email" class="detail" /><br /> -->
+            <label for="username">Password</label>
+            <input type="password" name="password" placeholder="Password" class="detail" />
+            <input type="submit" class="btn int" value="Log in">
+          </form>
+          <p class="or">OR</p>
+          <button class="btn fbk">
+            <i class="fab fa-facebook fa-lg" style="color: white; padding-right: 10px"></i><a href="#">Continue with
+              Facebook</a></button><br />
+          <button class="btn ggl">
+            <i class="fab fa-google" style="color: rgb(11, 241, 22); padding-right: 10px"></i><a href="#">Continue with
+              Google</a>
+          </button>
+          <footer>
+            <p>
+              By continuing, you agree to Pinterest's <strong class="strong">Terms of service</strong> and acknowledge
+              you've read our <strong class="strong">Privacy Policy, Notice at collection</strong>
+            </p>
+            <hr />
+            <a id="bottom" href="/"><strong class="strong">Not on Pinterest yet? Sign up</strong></a>
+          </footer>
+    </div>
+  </div>
+
+</body>
+
+</html>
